@@ -47,4 +47,4 @@ after_success:
   # Push the frontend
   - docker push onwardfave/udagram-frontend:v1
   # Push the reverseproxy
-  - docker push onwardfave/udagram-reverseproxy:v1
+  - docker push onwardfave/reverseproxy:v1
