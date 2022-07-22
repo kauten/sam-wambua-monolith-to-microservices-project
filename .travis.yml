@@ -23,7 +23,7 @@ script:
   # Build the frontend image
   - docker build -t udagram-frontend ./udagram-frontend
   # Build the reverseproxy image
-  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
+  - docker build -t reverseproxy ./udagram-reverseproxy
 
   # Tagging the feed api
   - docker tag udagram-api-feed onwardfave/udagram-api-feed:v1
