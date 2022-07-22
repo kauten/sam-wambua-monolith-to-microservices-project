@@ -32,7 +32,7 @@ script:
   # Tagging the frontend
   - docker tag udagram-frontend onwardfave/udagram-frontend:v1
   # Tagging the reverseproxy
-  - docker tag udagram-reverseproxy onwardfave/udagram-reverseproxy:v1
+  - docker tag reverseproxy onwardfave/reverseproxy:v1
   
 
 after_success:
