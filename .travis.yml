@@ -15,8 +15,16 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  # Run this command from the directory where you have the "docker-compose-build.yaml" file present
-  - docker-compose -f docker-compose-build.yaml build --parallel
+  # Use either `docker-compose` or individual `docker build` commands
+  # Build the api feeds image
+  - docker build -t udagram-api-feed ./udagram-api-feed
+  # Build the api users image
+  - docker build -t udagram-api-user ./udagram-api-user
+  # Build the frontend image
+  - docker build -t udagram-frontend ./udagram-frontend
+  # Build the reverseproxy image
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
+
   # Tagging the feed api
   - docker tag udagram-api-feed onwardfave/udagram-api-feed:v1
   # Tagging the user api
