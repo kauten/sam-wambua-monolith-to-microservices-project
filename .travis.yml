@@ -30,7 +30,7 @@ script:
   # Tagging the user api
   - docker tag udagram-api-user onwardfave/udagram-api-user:v4
   # Tagging the frontend
-  - docker tag udagram-frontend onwardfave/udagram-frontend:v3
+  - docker tag udagram-frontend onwardfave/udagram-frontend:v4
   # Tagging the reverseproxy
   - docker tag reverseproxy onwardfave/reverseproxy:v3
   
@@ -45,6 +45,6 @@ after_success:
   # Push the user api
   - docker push onwardfave/udagram-api-user:v4
   # Push the frontend
-  - docker push onwardfave/udagram-frontend:v3
+  - docker push onwardfave/udagram-frontend:v4
   # Push the reverseproxy
   - docker push onwardfave/reverseproxy:v3
