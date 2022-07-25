@@ -41,9 +41,9 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Push the images to the registry
   # Push the feed api
-  - docker push onwardfave/udagram-api-feed:v5
+  - docker push onwardfave/udagram-api-feed:v7
   # Push the user api
-  - docker push onwardfave/udagram-api-user:v4
+  - docker push onwardfave/udagram-api-user:v7
   # Push the frontend
   - docker push onwardfave/udagram-frontend:v6
   # Push the reverseproxy
