@@ -26,11 +26,11 @@ script:
   - docker build -t reverseproxy ./udagram-reverseproxy
 
   # Tagging the feed api
-  - docker tag udagram-api-feed onwardfave/udagram-api-feed:v7
+  - docker tag udagram-api-feed onwardfave/udagram-api-feed:v8
   # Tagging the user api
-  - docker tag udagram-api-user onwardfave/udagram-api-user:v7
+  - docker tag udagram-api-user onwardfave/udagram-api-user:v8
   # Tagging the frontend
-  - docker tag udagram-frontend onwardfave/udagram-frontend:v6
+  - docker tag udagram-frontend onwardfave/udagram-frontend:v8
   # Tagging the reverseproxy
   - docker tag reverseproxy onwardfave/reverseproxy:v3
   
@@ -41,10 +41,10 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Push the images to the registry
   # Push the feed api
-  - docker push onwardfave/udagram-api-feed:v7
+  - docker push onwardfave/udagram-api-feed:v8
   # Push the user api
-  - docker push onwardfave/udagram-api-user:v7
+  - docker push onwardfave/udagram-api-user:v8
   # Push the frontend
-  - docker push onwardfave/udagram-frontend:v6
+  - docker push onwardfave/udagram-frontend:v8
   # Push the reverseproxy
   - docker push onwardfave/reverseproxy:v3
